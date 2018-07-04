@@ -1,0 +1,26 @@
+# Tomcat
+server:
+    tomcat:
+        max-threads: 10
+        min-spare-threads: 10
+    port: 8080
+
+# mysql
+spring:
+    datasource:
+        type: com.alibaba.druid.pool.DruidDataSource
+#        driverClassName: com.mysql.jdbc.Driver
+        driverClassName: org.h2.Driver
+        url: jdbc:h2:mem:dbtest
+        username: sa
+        password:
+    jackson:
+        time-zone: GMT+8
+        date-format: yyyy-MM-dd HH:mm:ss
+    resources:
+            static-locations: classpath:/static/,classpath:/views/
+
+# Mybatis配置
+mybatis:
+    mapperLocations: classpath:mapper/**/*.xml
+
