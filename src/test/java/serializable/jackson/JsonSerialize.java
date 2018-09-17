@@ -1,6 +1,7 @@
 package serializable.jackson;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import serializable.protostuff.IoProtostuff;
 import serializable.protostuff.User;
 
 import java.io.IOException;
@@ -41,13 +42,17 @@ public class JsonSerialize {
         ObjectMapper mapper = new ObjectMapper();
         Long t1 = System.currentTimeMillis();
         byte[] writeValueAsBytes = null;
-        for (int i = 0; i < 10; i++) {
+//        for (int i = 0; i < 10; i++) {
             writeValueAsBytes = mapper.writeValueAsBytes(u);
-        }
+//        }
         System.out.println("json serialize: " + (System.currentTimeMillis() - t1) + "ms; 总大小：" + writeValueAsBytes.length);
         Long t2 = System.currentTimeMillis();
         User user = mapper.readValue(writeValueAsBytes, User.class);
         System.out.println("json deserialize: " + (System.currentTimeMillis() - t2) + "ms; User: " + user);
+
+
+        System.out.println(" 总大小：" + writeValueAsBytes.length + " ===== " + IoProtostuff.serialize(u).length);
+
 
     }
 }

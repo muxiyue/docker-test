@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e0bc67cc-61c9-4204-9015-0371c7bd347e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/proxy/file/org/assertj/core/internal/cglib/core/MethodWrapper$MethodWrapperKey$$KeyFactoryByCGLIB$$cdb62cb.class" afterPath="$PROJECT_DIR$/src/test/java/proxy/file/org/assertj/core/internal/cglib/core/MethodWrapper$MethodWrapperKey$$KeyFactoryByCGLIB$$cdb62cb.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/proxy/file/org/assertj/core/internal/cglib/proxy/Enhancer$EnhancerKey$$KeyFactoryByCGLIB$$8df2361e.class" afterPath="$PROJECT_DIR$/src/test/java/proxy/file/org/assertj/core/internal/cglib/proxy/Enhancer$EnhancerKey$$KeyFactoryByCGLIB$$8df2361e.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/proxy/file/proxy/LoginServiceImpl$$EnhancerByCGLIB$$2fe0b702$$FastClassByCGLIB$$8eecd290.class" afterPath="$PROJECT_DIR$/src/test/java/proxy/file/proxy/LoginServiceImpl$$EnhancerByCGLIB$$2fe0b702$$FastClassByCGLIB$$8eecd290.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/proxy/file/proxy/LoginServiceImpl$$EnhancerByCGLIB$$2fe0b702.class" afterPath="$PROJECT_DIR$/src/test/java/proxy/file/proxy/LoginServiceImpl$$EnhancerByCGLIB$$2fe0b702.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/proxy/file/proxy/LoginServiceImpl$$FastClassByCGLIB$$95562eec.class" afterPath="$PROJECT_DIR$/src/test/java/proxy/file/proxy/LoginServiceImpl$$FastClassByCGLIB$$95562eec.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/proxy/file/proxy/UserServiceImpl$$EnhancerByCGLIB$$adb8ed6c$$FastClassByCGLIB$$ffb8041.class" afterPath="$PROJECT_DIR$/src/test/java/proxy/file/proxy/UserServiceImpl$$EnhancerByCGLIB$$adb8ed6c$$FastClassByCGLIB$$ffb8041.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/proxy/file/proxy/UserServiceImpl$$EnhancerByCGLIB$$adb8ed6c.class" afterPath="$PROJECT_DIR$/src/test/java/proxy/file/proxy/UserServiceImpl$$EnhancerByCGLIB$$adb8ed6c.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/proxy/file/proxy/UserServiceImpl$$FastClassByCGLIB$$667bfe0a.class" afterPath="$PROJECT_DIR$/src/test/java/proxy/file/proxy/UserServiceImpl$$FastClassByCGLIB$$667bfe0a.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/proxy/file/proxy/cglib/UserDao$$EnhancerByCGLIB$$1072815c$$FastClassByCGLIB$$e1802e6d.class" afterPath="$PROJECT_DIR$/src/test/java/proxy/file/proxy/cglib/UserDao$$EnhancerByCGLIB$$1072815c$$FastClassByCGLIB$$e1802e6d.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/proxy/file/proxy/cglib/UserDao$$EnhancerByCGLIB$$1072815c.class" afterPath="$PROJECT_DIR$/src/test/java/proxy/file/proxy/cglib/UserDao$$EnhancerByCGLIB$$1072815c.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/proxy/file/proxy/cglib/UserDao$$FastClassByCGLIB$$66f3b6da.class" afterPath="$PROJECT_DIR$/src/test/java/proxy/file/proxy/cglib/UserDao$$FastClassByCGLIB$$66f3b6da.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dockerfile" afterPath="$PROJECT_DIR$/Dockerfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/User.java" afterPath="$PROJECT_DIR$/src/test/java/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/base/classloader/ClassLoaderTest.java" afterPath="$PROJECT_DIR$/src/test/java/base/classloader/ClassLoaderTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/base/classloader/Constructor.java" afterPath="$PROJECT_DIR$/src/test/java/base/classloader/Constructor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/base/classloader/Test.java" afterPath="$PROJECT_DIR$/src/test/java/base/classloader/Test.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/bean/BeanLifeCycle.java" afterPath="$PROJECT_DIR$/src/test/java/bean/BeanLifeCycle.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/bean/MyBeanFactoryPostProcessor.java" afterPath="$PROJECT_DIR$/src/test/java/bean/MyBeanFactoryPostProcessor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/bean/MyBeanPostProcessor.java" afterPath="$PROJECT_DIR$/src/test/java/bean/MyBeanPostProcessor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/bean/MyInstantiationAwareBeanPostProcessor.java" afterPath="$PROJECT_DIR$/src/test/java/bean/MyInstantiationAwareBeanPostProcessor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/bean/Person.java" afterPath="$PROJECT_DIR$/src/test/java/bean/Person.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/classloader/Calc.java" afterPath="$PROJECT_DIR$/src/test/java/classloader/Calc.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/classloader/FindClassOrder.java" afterPath="$PROJECT_DIR$/src/test/java/classloader/FindClassOrder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/classloader/FindClassOrder2.java" afterPath="$PROJECT_DIR$/src/test/java/classloader/FindClassOrder2.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/classloader/asm/Account.java" afterPath="$PROJECT_DIR$/src/test/java/classloader/asm/Account.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/classloader/asm/Generator.java" afterPath="$PROJECT_DIR$/src/test/java/classloader/asm/Generator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/classloader/asm/SecurityChecker.java" afterPath="$PROJECT_DIR$/src/test/java/classloader/asm/SecurityChecker.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/classloader/jit/JITTest.java" afterPath="$PROJECT_DIR$/src/test/java/classloader/jit/JITTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/test/HelloMain.java" afterPath="$PROJECT_DIR$/src/test/java/com/test/HelloMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/test/MyClassLoader.java" afterPath="$PROJECT_DIR$/src/test/java/com/test/MyClassLoader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/test/Test.java" afterPath="$PROJECT_DIR$/src/test/java/com/test/Test.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/test/Worker.java" afterPath="$PROJECT_DIR$/src/test/java/com/test/Worker.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/test/test/HelloLoader.java" afterPath="$PROJECT_DIR$/src/test/java/com/test/test/HelloLoader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/io/renren/HtmlUnitTest.java" afterPath="$PROJECT_DIR$/src/test/java/io/renren/HtmlUnitTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/jdk/functionalInterface/GreetingService.java" afterPath="$PROJECT_DIR$/src/test/java/jdk/functionalInterface/GreetingService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/jdk/optional/Java8Optional.java" afterPath="$PROJECT_DIR$/src/test/java/jdk/optional/Java8Optional.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/jdk/spi/AddOperation.java" afterPath="$PROJECT_DIR$/src/test/java/jdk/spi/AddOperation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/jdk/spi/DivisionOperation.java" afterPath="$PROJECT_DIR$/src/test/java/jdk/spi/DivisionOperation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/jdk/spi/Operation.java" afterPath="$PROJECT_DIR$/src/test/java/jdk/spi/Operation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/jdk/spi/SpiMain.java" afterPath="$PROJECT_DIR$/src/test/java/jdk/spi/SpiMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/kafka/DecodeingKafka.java" afterPath="$PROJECT_DIR$/src/test/java/kafka/DecodeingKafka.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/kafka/EncodeingKafka.java" afterPath="$PROJECT_DIR$/src/test/java/kafka/EncodeingKafka.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/kafka/Kafka211Context.java" afterPath="$PROJECT_DIR$/src/test/java/kafka/Kafka211Context.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/kafka/MessageContent.java" afterPath="$PROJECT_DIR$/src/test/java/kafka/MessageContent.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/kafka/kafkaConsumer.java" afterPath="$PROJECT_DIR$/src/test/java/kafka/kafkaConsumer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/kafka/kafkaConsumerNew.java" afterPath="$PROJECT_DIR$/src/test/java/kafka/kafkaConsumerNew.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/kafka/kafkaProducer.java" afterPath="$PROJECT_DIR$/src/test/java/kafka/kafkaProducer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/kafka/kafkaProducerNew.java" afterPath="$PROJECT_DIR$/src/test/java/kafka/kafkaProducerNew.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/lock/JvmLockCompare.java" afterPath="$PROJECT_DIR$/src/test/java/lock/JvmLockCompare.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/lock/LongAdderDemo.java" afterPath="$PROJECT_DIR$/src/test/java/lock/LongAdderDemo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/proxy/ProxyTestCglib.java" afterPath="$PROJECT_DIR$/src/test/java/proxy/ProxyTestCglib.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/proxy/ProxyTestJDK.java" afterPath="$PROJECT_DIR$/src/test/java/proxy/ProxyTestJDK.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/proxy/cglib/App.java" afterPath="$PROJECT_DIR$/src/test/java/proxy/cglib/App.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/proxy/cglib/CgLibProxyFactory.java" afterPath="$PROJECT_DIR$/src/test/java/proxy/cglib/CgLibProxyFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/proxy/cglib/UserDao.java" afterPath="$PROJECT_DIR$/src/test/java/proxy/cglib/UserDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/serializable/JavaSerialize/JavaSerialize.java" afterPath="$PROJECT_DIR$/src/test/java/serializable/JavaSerialize/JavaSerialize.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/serializable/Main.java" afterPath="$PROJECT_DIR$/src/test/java/serializable/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/serializable/fastjson/FastJsonSerialize.java" afterPath="$PROJECT_DIR$/src/test/java/serializable/fastjson/FastJsonSerialize.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/serializable/jackson/JsonSerialize.java" afterPath="$PROJECT_DIR$/src/test/java/serializable/jackson/JsonSerialize.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/serializable/protostuff/CacheObject.java" afterPath="$PROJECT_DIR$/src/test/java/serializable/protostuff/CacheObject.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/serializable/protostuff/GenericResponse.java" afterPath="$PROJECT_DIR$/src/test/java/serializable/protostuff/GenericResponse.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/serializable/protostuff/GoodsBrand.java" afterPath="$PROJECT_DIR$/src/test/java/serializable/protostuff/GoodsBrand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/serializable/protostuff/IoProtostuff.java" afterPath="$PROJECT_DIR$/src/test/java/serializable/protostuff/IoProtostuff.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/serializable/protostuff/TimestampDelegate.java" afterPath="$PROJECT_DIR$/src/test/java/serializable/protostuff/TimestampDelegate.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/serializable/protostuff/User.java" afterPath="$PROJECT_DIR$/src/test/java/serializable/protostuff/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/serializable/protostuff/jprotobuf/PersonJProtoBufProtoClass.java" afterPath="$PROJECT_DIR$/src/test/java/serializable/protostuff/jprotobuf/PersonJProtoBufProtoClass.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/serializable/protostuff/jprotobuf/ProtoBuffSerialize.java" afterPath="$PROJECT_DIR$/src/test/java/serializable/protostuff/jprotobuf/ProtoBuffSerialize.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/singleton/DBConnection.java" afterPath="$PROJECT_DIR$/src/test/java/singleton/DBConnection.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/singleton/DataSourceEnum.java" afterPath="$PROJECT_DIR$/src/test/java/singleton/DataSourceEnum.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/test.txt" afterPath="$PROJECT_DIR$/src/test/java/test.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/META-INF/services/jdk.spi.Operation" afterPath="$PROJECT_DIR$/src/test/resources/META-INF/services/jdk.spi.Operation" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+    <option name="PARALLEL_COMPILATION" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GoLibraries">
+    <option name="urls">
+      <list>
+        <option value="file://$PROJECT_DIR$/../../go/go_workspace" />
+      </list>
+    </option>
+    <option name="useGoPathFromSystemEnvironment" value="false" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
+    <option name="height" value="733" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Ali-Check</id>
+          </State>
+          <State>
+            <id>Android &gt; Lint &gt; Correctness</id>
+          </State>
+          <State>
+            <id>Android &gt; Lint &gt; Performance</id>
+          </State>
+          <State>
+            <id>Class structureJava</id>
+          </State>
+          <State>
+            <id>Code maturity issuesJava</id>
+          </State>
+          <State>
+            <id>Code style issuesJava</id>
+          </State>
+          <State>
+            <id>Data flow issuesJava</id>
+          </State>
+          <State>
+            <id>Data flow issuesJavaScript</id>
+          </State>
+          <State>
+            <id>Google Web Toolkit issues</id>
+          </State>
+          <State>
+            <id>JUnit issuesJava</id>
+          </State>
+          <State>
+            <id>Java</id>
+          </State>
+          <State>
+            <id>Java 5Java language level migration aidsJava</id>
+          </State>
+          <State>
+            <id>Java 7Java language level migration aidsJava</id>
+          </State>
+          <State>
+            <id>Java 8Java language level migration aidsJava</id>
+          </State>
+          <State>
+            <id>Java language level migration aidsJava</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+          <State>
+            <id>Javadoc issuesJava</id>
+          </State>
+          <State>
+            <id>Performance issuesJava</id>
+          </State>
+          <State>
+            <id>Portability issuesJava</id>
+          </State>
+          <State>
+            <id>Probable bugsJava</id>
+          </State>
+          <State>
+            <id>Resource management issuesJava</id>
+          </State>
+          <State>
+            <id>Spring</id>
+          </State>
+          <State>
+            <id>Spring AOPSpring</id>
+          </State>
+          <State>
+            <id>TestNGJava</id>
+          </State>
+          <State>
+            <id>Threading issuesJava</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Ali-Check</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource ProjectPane="true" />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="docker-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="docker-test" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="JavaScriptPreferStrict" value="false" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
+    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
+    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e0bc67cc-61c9-4204-9015-0371c7bd347e" name="Default" comment="" />
+      <created>1532432097944</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1532432097944</updated>
+      <workItem from="1532432113932" duration="9000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="9000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1280" height="733" extended-state="6" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="BPMNPalette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="SHOW_DIRTY_RECURSIVELY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArquillianSettingsConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>scala-sdk-2.11.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

@@ -1,0 +1,34 @@
+version: '3.6'
+
+volumes:
+  esdata:
+    driver: local
+services:
+  elasticsearch:
+    image: hub.c.163.com/muxiyue/elasticsearch:6.4.0
+    #hostname: elasticsearch
+    environment:
+      - "cluster.name=es-cluster"
+      - "bootstrap.memory_lock=true"
+      - "ES_JAVA_OPTS=-Xms2g -Xmx2g"
+      - "network.host=0.0.0.0"
+      - "discovery.zen.ping.unicast.hosts=elasticsearch"
+      - "ELASTIC_PASSWORD=elastic"
+#    ulimits:
+#      memlock:
+#        soft: -1
+#        hard: -1
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
+      - /etc/localtime:/etc/localtime:ro
+    deploy:
+      mode: global
+      placement:
+        constraints:
+          - node.labels.elasticsearch == elasticsearch
+      restart_policy:
+        condition: on-failure
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+#      endpoint_mode: dnsrr

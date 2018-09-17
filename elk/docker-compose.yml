@@ -1,0 +1,185 @@
+version: '3.6'
+
+volumes:
+  esdata:
+    driver: local
+#  beatdata:
+#    driver: local
+networks:
+  esnet:
+    driver: overlay
+#    attachable: true
+configs:
+  logstash_conf:
+    file: ./logstash/logstash.conf
+  kibana_config:
+    file: ./kibana/kibana.yml
+  es_proxy_config:
+    file: ./es_proxy/nginx.conf
+#  filebeat_config:
+#    file: ./filebeat/filebeat.yml
+services:
+  elasticsearch:
+    image: hub.c.163.com/muxiyue/elasticsearch:6.4.0
+    #hostname: elasticsearch
+    environment:
+      - "cluster.name=es-cluster"
+      - "bootstrap.memory_lock=true"
+      - "ES_JAVA_OPTS=-Xms2g -Xmx2g"
+      - "network.host=0.0.0.0"
+      - "discovery.zen.minimum_master_nodes=2"
+      - "discovery.zen.ping.unicast.hosts=elasticsearch"
+      - "ELASTIC_PASSWORD=elastic"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    networks:
+      - esnet
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
+      - /etc/localtime:/etc/localtime:ro
+    deploy:
+      mode: global
+      placement:
+        constraints:
+          - node.labels.elasticsearch == elasticsearch
+      restart_policy:
+        condition: on-failure
+      endpoint_mode: dnsrr
+#    ports:
+#      - "9200:9200"
+#      - "9300:9300"
+
+  logstash:
+    image: hub.c.163.com/muxiyue/logstash:6.4.0
+    hostname: logstash
+    environment:
+      - "xpack.monitoring.elasticsearch.url=http://elasticsearch:9200"
+      - "xpack.monitoring.enabled=true"
+      - "xpack.monitoring.elasticsearch.username=elastic"
+      - "xpack.monitoring.elasticsearch.password=elastic"
+      - "LS_JAVA_OPTS=-Xmx2g"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 4096M
+      placement:
+        constraints:
+          - node.labels.logstash == logstash
+      mode: replicated
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+    ports:
+      - 5044:5044
+    networks:
+      - esnet
+    configs:
+      - source: logstash_conf
+        target: /usr/share/logstash/pipeline/logstash.conf
+    depends_on:
+      - elasticsearch
+
+  kibana:
+    image: hub.c.163.com/muxiyue/kibana:6.4.0
+    hostname: kibana
+    environment:
+      - "ELASTICSEARCH_URL=http://elasticsearch:9200"
+    ports:
+      - "5601:5601"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+    deploy:
+      placement:
+        constraints:
+           - node.role == manager
+           - node.labels.kibana == kibana
+      restart_policy:
+        condition: on-failure
+    depends_on:
+      - elasticsearch
+    networks:
+      - esnet
+    configs:
+      - source: kibana_config
+        target: /usr/share/kibana/config/kibana.yml
+
+  es_proxy:
+    image: hub.c.163.com/library/nginx:1.13.0
+    ports:
+      - "9200:80"
+    depends_on:
+      - elasticsearch
+    networks:
+      - esnet
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          cpus: '1'
+          memory: 1024M
+      update_config:
+        parallelism: 1
+        delay: 5s
+      placement:
+        constraints:
+          - node.role != manager
+      restart_policy:
+        condition: on-failure
+    configs:
+      - source: es_proxy_config
+        target: /etc/nginx/nginx.conf
+
+#swarm不支持
+#  logpilot:
+#      image: registry.cn-hangzhou.aliyuncs.com/acs-sample/log-pilot:latest
+#      hostname: logpilot
+#      environment:
+#        - "PILOT_TYPE=filebeat"
+#        - "LOGGING_OUTPUT=logstash"
+#        - "LOGSTASH_HOST=logstash"
+#        - "LOGSTASH_PORT=5044"
+#        - "NODE_NAME=${NODE_NAME}"
+#      networks:
+#        - esnet
+#      depends_on:
+#        - logstash
+#      privileged: true
+#      volumes:
+#        - /etc/localtime:/etc/localtime:ro
+#        - beatdata:/var/lib/filebeat
+#        - /var/run/docker.sock:/var/run/docker.sock
+#        - /:/host:ro
+#      deploy:
+#        mode: global
+#        restart_policy:
+#          condition: on-failure
+
+# 暂时不用，使用log-pilot
+#  filebeat:
+#      image: hub.c.163.com/muxiyue/filebeat:6.4.0
+#      hostname: filebeat
+#      networks:
+#        - esnet
+#      depends_on:
+#        - logstash
+#        - elasticsearch
+#      privileged: true
+#      volumes:
+#        - /home/elk/filebeat/logs:/usr/share/filebeat/logs
+#        - /home/logs:/home/logs:ro
+#        - /etc/localtime:/etc/localtime:ro
+#        - /home/elk/filebeat/registry:/usr/share/filebeat/data/registry
+#      configs:
+#        - source: filebeat_config
+#          target: /usr/share/filebeat/filebeat.yml
+#      deploy:
+#        mode: global
+#        restart_policy:
+#          condition: on-failure

@@ -11,7 +11,7 @@ public class Person implements BeanFactoryAware, BeanNameAware,
 
     private String name;
     private String address;
-    private int phone;
+    private String phone;
 
     private BeanFactory beanFactory;
     private String beanName;
@@ -38,11 +38,11 @@ public class Person implements BeanFactoryAware, BeanNameAware,
         this.address = address;
     }
 
-    public int getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(String phone) {
         System.out.println("【注入属性】注入属性phone");
         this.phone = phone;
     }

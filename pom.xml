@@ -26,6 +26,9 @@
 		<commons.configuration.version>1.10</commons.configuration.version>
 		<fastjson.version>1.2.31</fastjson.version>
 		<velocity.version>1.7</velocity.version>
+        <docker.image.prefix>172.16.1.146:8888/wondertek</docker.image.prefix>
+		<maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
+		<!--<maven.build.timestamp.format>yyyyMMddHH</maven.build.timestamp.format>-->
 	</properties>
 
 	<dependencies>
@@ -33,6 +36,14 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<!--<dependency>-->
+			<!--<groupId>org.springframework.boot</groupId>-->
+			<!--<artifactId>spring-data-redis</artifactId>-->
+		<!--</dependency>-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -184,7 +195,62 @@
 			<!--<scope>test</scope>-->
 		</dependency>
 
+		<dependency>
+			<groupId>com.spotify</groupId>
+			<artifactId>docker-maven-plugin</artifactId>
+			<version>0.4.13</version>
+		</dependency>
 
+        <dependency>
+            <groupId>xml-apis</groupId>
+            <artifactId>xml-apis</artifactId>
+            <!--?<version>1.4.01</version>-->
+        </dependency>
+
+
+
+		<!--<dependency>-->
+
+			<!--<groupId>org.reflections</groupId>-->
+
+			<!--<artifactId>reflections-maven</artifactId>-->
+
+			<!--<version>0.9.9-RC2</version>-->
+
+			<!--<exclusions>-->
+
+				<!--<exclusion>-->
+
+					<!--<groupId>javassist</groupId>-->
+
+					<!--<artifactId>javassist</artifactId>-->
+
+				<!--</exclusion>-->
+
+			<!--</exclusions>-->
+
+		<!--</dependency>-->
+
+		<!-- Netty开始 -->
+		<!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
+		<dependency>
+			<groupId>io.netty</groupId>
+			<artifactId>netty-all</artifactId>
+			<version>4.1.6.Final</version>
+		</dependency>
+		<!-- Netty结束 -->
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+		</dependency>
+
+
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-aop</artifactId>
+		</dependency>
 
 	</dependencies>
 
@@ -211,6 +277,25 @@
 					<!--</execution>-->
 				<!--</executions>-->
 			<!--</plugin>-->
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>1.9.1</version>
+				<executions>
+					<execution>
+						<id>timestamp-property</id>
+						<goals>
+							<goal>timestamp-property</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<name>current.time</name>
+					<pattern>yyyyMMddHHmmss</pattern>
+					<timeZone>GMT+8</timeZone>
+				</configuration>
+			</plugin>
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -241,6 +326,94 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 
+
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>dockerfile-maven-plugin</artifactId>
+                <version>1.4.0</version>
+				<executions>
+					<execution>
+						<id>default</id><!-- 要绑定到的生命周期的阶段 -->
+						<phase>install</phase><!-- 要绑定到的生命周期的阶段 -->
+						<goals> <!-- 要绑定的插件的目标 -->
+							<goal>build</goal>
+							<goal>push</goal>
+						</goals>
+					</execution>
+				</executions>
+                <configuration>
+					<username>registry</username>
+					<password>1qaz!QAZ</password>
+                    <repository>${docker.image.prefix}/${project.artifactId}</repository>
+                    <tag>${project.version}-${current.time}</tag>
+                    <buildArgs>
+                        <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
+						<JAR_FILE>target/docker-test-1.0.0.jar</JAR_FILE>
+                    </buildArgs>
+
+                </configuration>
+            </plugin>
+
+            <!-- https://mvnrepository.com/artifact/com.spotify/docker-maven-plugin -->
+            <!--<plugin>-->
+                <!--<groupId>com.spotify</groupId>-->
+                <!--<artifactId>docker-maven-plugin</artifactId>-->
+                <!--<version>0.4.13</version>-->
+                <!--&lt;!&ndash;?<configuration>&ndash;&gt;-->
+                    <!--&lt;!&ndash;?<dockerHost>tcp://192.168.99.100:2376</dockerHost>&ndash;&gt;-->
+                    <!--&lt;!&ndash;?<certPath>C:\Users\fairjm\.docker\machine\machines\default</certPath>&ndash;&gt;-->
+                    <!--&lt;!&ndash;?<images>&ndash;&gt;-->
+                        <!--&lt;!&ndash;?<image>&ndash;&gt;-->
+                            <!--&lt;!&ndash;?<name>${project.name}:${project.version}</name>&ndash;&gt;-->
+                            <!--&lt;!&ndash;?<build>&ndash;&gt;-->
+                                <!--&lt;!&ndash;?<from>openjdk:8-jre</from>&ndash;&gt;-->
+                                <!--&lt;!&ndash;?<args>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;?<JAR_FILE>${project.name}-${project.version}.jar</JAR_FILE>&ndash;&gt;-->
+                                <!--&lt;!&ndash;?</args>&ndash;&gt;-->
+                                <!--&lt;!&ndash;?<assembly>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;?<descriptorRef>artifact</descriptorRef>&ndash;&gt;-->
+                                <!--&lt;!&ndash;?</assembly>&ndash;&gt;-->
+                                <!--&lt;!&ndash;?<entryPoint>["java"]</entryPoint>&ndash;&gt;-->
+                                <!--&lt;!&ndash;?<cmd>["-jar","maven/${project.name}-${project.version}.jar"]</cmd>&ndash;&gt;-->
+                            <!--&lt;!&ndash;?</build>&ndash;&gt;-->
+                            <!--&lt;!&ndash;?<run>&ndash;&gt;-->
+                                <!--&lt;!&ndash;?<ports>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;?<port>8888:8080</port>&ndash;&gt;-->
+                                <!--&lt;!&ndash;?</ports>&ndash;&gt;-->
+                            <!--&lt;!&ndash;?</run>&ndash;&gt;-->
+                        <!--&lt;!&ndash;?</image>&ndash;&gt;-->
+                    <!--&lt;!&ndash;?</images>&ndash;&gt;-->
+                <!--&lt;!&ndash;?</configuration>&ndash;&gt;-->
+                <!--&lt;!&ndash;?<configuration>&ndash;&gt;-->
+                    <!--&lt;!&ndash;?<imageName>lhdocker.com/${project.artifactId}</imageName>&ndash;&gt;-->
+                    <!--&lt;!&ndash;?<baseImage>java</baseImage>&ndash;&gt;-->
+                    <!--&lt;!&ndash;?<dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>&ndash;&gt;-->
+                    <!--&lt;!&ndash;?<dockerHost>tcp://192.168.99.100:2376</dockerHost>&ndash;&gt;-->
+                    <!--&lt;!&ndash;?<dockerCertPath>/Users/lihong/.docker/machine/machines/default</dockerCertPath>&ndash;&gt;-->
+                    <!--&lt;!&ndash;?<resources>&ndash;&gt;-->
+                        <!--&lt;!&ndash;?<resource>&ndash;&gt;-->
+                            <!--&lt;!&ndash;?<targetPath>/</targetPath>&ndash;&gt;-->
+                            <!--&lt;!&ndash;?<directory>${project.build.directory}</directory>&ndash;&gt;-->
+                            <!--&lt;!&ndash;?<include>${project.build.finalName}.jar</include>&ndash;&gt;-->
+                        <!--&lt;!&ndash;?</resource>&ndash;&gt;-->
+                    <!--&lt;!&ndash;?</resources>&ndash;&gt;-->
+                <!--&lt;!&ndash;?</configuration>&ndash;&gt;-->
+
+                <!--<configuration>-->
+                    <!--<imageName>${docker.image.prefix}/${project.name}:${project.version}</imageName>-->
+                    <!--<dockerDirectory>src/main/docker</dockerDirectory>-->
+                    <!--<dockerHost>http://127.0.0.1:5200</dockerHost>-->
+                    <!--<resources>-->
+                        <!--<resource>-->
+                            <!--<targetPath>/</targetPath>-->
+                            <!--<directory>${project.build.directory}</directory>-->
+                            <!--<include>${project.build.finalName}.war</include>-->
+                        <!--</resource>-->
+                    <!--</resources>-->
+                <!--</configuration>-->
+
+            <!--</plugin>-->
+
 		</plugins>
 	</build>
 
@@ -249,6 +422,14 @@
 			<id>public</id>
 			<name>aliyun nexus</name>
 			<url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+		</repository>
+		<repository>
+			<id>mvnrepository</id>
+			<name>mvnrepository</name>
+			<url>https://mvnrepository.com/artifact/</url>
 			<releases>
 				<enabled>true</enabled>
 			</releases>
