@@ -8,9 +8,9 @@ import org.springframework.cache.annotation.EnableCaching;
 @SpringBootApplication
 @MapperScan("docker.test.dao")
 @EnableCaching
-public class RenrenApplication {
+public class DockerTestApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(RenrenApplication.class, args);
+		SpringApplication.run(DockerTestApplication.class, args);
 	}
 }
