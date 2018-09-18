@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>io.renren</groupId>
 	<artifactId>docker-test</artifactId>
 	<version>1.0.0</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 	<description>docker-test</description>
 
 	<parent>
@@ -26,7 +26,7 @@
 		<commons.configuration.version>1.10</commons.configuration.version>
 		<fastjson.version>1.2.31</fastjson.version>
 		<velocity.version>1.7</velocity.version>
-        <docker.image.prefix>172.16.1.146:8888/wondertek</docker.image.prefix>
+		<docker.image.prefix>172.16.1.146/wondertek</docker.image.prefix>
 		<maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
 		<!--<maven.build.timestamp.format>yyyyMMddHH</maven.build.timestamp.format>-->
 	</properties>
@@ -38,8 +38,8 @@
 			<scope>test</scope>
 		</dependency>
 		<!--<dependency>-->
-			<!--<groupId>org.springframework.boot</groupId>-->
-			<!--<artifactId>spring-data-redis</artifactId>-->
+		<!--<groupId>org.springframework.boot</groupId>-->
+		<!--<artifactId>spring-data-redis</artifactId>-->
 		<!--</dependency>-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -97,9 +97,9 @@
 
 		<!--&lt;!&ndash; https://mvnrepository.com/artifact/org.apache.kafka/kafka &ndash;&gt;-->
 		<!--<dependency>-->
-			<!--<groupId>org.apache.kafka</groupId>-->
-			<!--<artifactId>kafka_2.12</artifactId>-->
-			<!--<version>1.1.0</version>-->
+		<!--<groupId>org.apache.kafka</groupId>-->
+		<!--<artifactId>kafka_2.12</artifactId>-->
+		<!--<version>1.1.0</version>-->
 		<!--</dependency>-->
 
 
@@ -153,13 +153,13 @@
 
 
 		<!--<dependency>-->
-			<!--<groupId>org.apache.tomcat.embed</groupId>-->
-			<!--<artifactId>tomcat-embed-core</artifactId>-->
-			<!--<scope>test</scope>-->
+		<!--<groupId>org.apache.tomcat.embed</groupId>-->
+		<!--<artifactId>tomcat-embed-core</artifactId>-->
+		<!--<scope>test</scope>-->
 		<!--</dependency>-->
 		<!--<dependency>-->
-			<!--<groupId>javax.servlet</groupId>-->
-			<!--<artifactId>javax.servlet-api</artifactId>-->
+		<!--<groupId>javax.servlet</groupId>-->
+		<!--<artifactId>javax.servlet-api</artifactId>-->
 		<!--</dependency>-->
 
 
@@ -201,33 +201,33 @@
 			<version>0.4.13</version>
 		</dependency>
 
-        <dependency>
-            <groupId>xml-apis</groupId>
-            <artifactId>xml-apis</artifactId>
-            <!--?<version>1.4.01</version>-->
-        </dependency>
+		<dependency>
+			<groupId>xml-apis</groupId>
+			<artifactId>xml-apis</artifactId>
+			<!--?<version>1.4.01</version>-->
+		</dependency>
 
 
 
 		<!--<dependency>-->
 
-			<!--<groupId>org.reflections</groupId>-->
+		<!--<groupId>org.reflections</groupId>-->
 
-			<!--<artifactId>reflections-maven</artifactId>-->
+		<!--<artifactId>reflections-maven</artifactId>-->
 
-			<!--<version>0.9.9-RC2</version>-->
+		<!--<version>0.9.9-RC2</version>-->
 
-			<!--<exclusions>-->
+		<!--<exclusions>-->
 
-				<!--<exclusion>-->
+		<!--<exclusion>-->
 
-					<!--<groupId>javassist</groupId>-->
+		<!--<groupId>javassist</groupId>-->
 
-					<!--<artifactId>javassist</artifactId>-->
+		<!--<artifactId>javassist</artifactId>-->
 
-				<!--</exclusion>-->
+		<!--</exclusion>-->
 
-			<!--</exclusions>-->
+		<!--</exclusions>-->
 
 		<!--</dependency>-->
 
@@ -252,6 +252,20 @@
 			<artifactId>spring-boot-starter-aop</artifactId>
 		</dependency>
 
+
+		<!--打包到tomcat下-->
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.spotify</groupId>
+			<artifactId>dockerfile-maven-plugin</artifactId>
+			<version>1.4.4</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -261,21 +275,21 @@
 			<!--mvn package-->
 
 			<!--<plugin>-->
-				<!--<groupId>com.baidu</groupId>-->
-				<!--<artifactId>jprotobuf-precompile-plugin</artifactId>-->
-				<!--<version>2.0.4</version>-->
-				<!--<configuration>-->
-					<!--<skipErrorNoDescriptorsFound>true</skipErrorNoDescriptorsFound>-->
-					<!--<filterClassPackage>com.baidu</filterClassPackage>-->
-				<!--</configuration>-->
-				<!--<executions>-->
-					<!--<execution>-->
-						<!--<phase>compile</phase>-->
-						<!--<goals>-->
-							<!--<goal>precompile</goal>-->
-						<!--</goals>-->
-					<!--</execution>-->
-				<!--</executions>-->
+			<!--<groupId>com.baidu</groupId>-->
+			<!--<artifactId>jprotobuf-precompile-plugin</artifactId>-->
+			<!--<version>2.0.4</version>-->
+			<!--<configuration>-->
+			<!--<skipErrorNoDescriptorsFound>true</skipErrorNoDescriptorsFound>-->
+			<!--<filterClassPackage>com.baidu</filterClassPackage>-->
+			<!--</configuration>-->
+			<!--<executions>-->
+			<!--<execution>-->
+			<!--<phase>compile</phase>-->
+			<!--<goals>-->
+			<!--<goal>precompile</goal>-->
+			<!--</goals>-->
+			<!--</execution>-->
+			<!--</executions>-->
 			<!--</plugin>-->
 
 			<plugin>
@@ -292,7 +306,8 @@
 				</executions>
 				<configuration>
 					<name>current.time</name>
-					<pattern>yyyyMMddHHmmss</pattern>
+					<!--<pattern>yyyyMMddHHmmss</pattern>-->
+					<pattern>yyyyMMddHH</pattern>
 					<timeZone>GMT+8</timeZone>
 				</configuration>
 			</plugin>
@@ -327,92 +342,92 @@
 			</plugin>
 
 
-            <plugin>
-                <groupId>com.spotify</groupId>
-                <artifactId>dockerfile-maven-plugin</artifactId>
-                <version>1.4.0</version>
-				<executions>
-					<execution>
-						<id>default</id><!-- 要绑定到的生命周期的阶段 -->
-						<phase>install</phase><!-- 要绑定到的生命周期的阶段 -->
-						<goals> <!-- 要绑定的插件的目标 -->
-							<goal>build</goal>
-							<goal>push</goal>
-						</goals>
-					</execution>
-				</executions>
-                <configuration>
-					<username>registry</username>
+			<plugin>
+				<groupId>com.spotify</groupId>
+				<artifactId>dockerfile-maven-plugin</artifactId>
+				<version>1.4.4</version>
+				<!--<executions>-->
+					<!--<execution>-->
+						<!--<id>default</id>-->
+						<!--<phase>install</phase>&lt;!&ndash; 要绑定到的生命周期的阶段 &ndash;&gt;-->
+						<!--<goals> &lt;!&ndash; 要绑定的插件的目标 &ndash;&gt;-->
+							<!--<goal>build</goal>-->
+							<!--<goal>push</goal>-->
+						<!--</goals>-->
+					<!--</execution>-->
+				<!--</executions>-->
+				<configuration>
+					<username>admin</username>
 					<password>1qaz!QAZ</password>
-                    <repository>${docker.image.prefix}/${project.artifactId}</repository>
-                    <tag>${project.version}-${current.time}</tag>
-                    <buildArgs>
-                        <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
-						<JAR_FILE>target/docker-test-1.0.0.jar</JAR_FILE>
-                    </buildArgs>
+					<repository>${docker.image.prefix}/${project.artifactId}</repository>
+					<tag>${project.version}-${current.time}</tag>
+					<buildArgs>
+						<!--<JAR_FILE>target/${project.build.finalName}.${project.packaging}</JAR_FILE>-->
+						<JAR_FILE>target/docker-test-1.0.0.war</JAR_FILE>
+					</buildArgs>
 
-                </configuration>
-            </plugin>
+				</configuration>
+			</plugin>
 
-            <!-- https://mvnrepository.com/artifact/com.spotify/docker-maven-plugin -->
-            <!--<plugin>-->
-                <!--<groupId>com.spotify</groupId>-->
-                <!--<artifactId>docker-maven-plugin</artifactId>-->
-                <!--<version>0.4.13</version>-->
-                <!--&lt;!&ndash;?<configuration>&ndash;&gt;-->
-                    <!--&lt;!&ndash;?<dockerHost>tcp://192.168.99.100:2376</dockerHost>&ndash;&gt;-->
-                    <!--&lt;!&ndash;?<certPath>C:\Users\fairjm\.docker\machine\machines\default</certPath>&ndash;&gt;-->
-                    <!--&lt;!&ndash;?<images>&ndash;&gt;-->
-                        <!--&lt;!&ndash;?<image>&ndash;&gt;-->
-                            <!--&lt;!&ndash;?<name>${project.name}:${project.version}</name>&ndash;&gt;-->
-                            <!--&lt;!&ndash;?<build>&ndash;&gt;-->
-                                <!--&lt;!&ndash;?<from>openjdk:8-jre</from>&ndash;&gt;-->
-                                <!--&lt;!&ndash;?<args>&ndash;&gt;-->
-                                    <!--&lt;!&ndash;?<JAR_FILE>${project.name}-${project.version}.jar</JAR_FILE>&ndash;&gt;-->
-                                <!--&lt;!&ndash;?</args>&ndash;&gt;-->
-                                <!--&lt;!&ndash;?<assembly>&ndash;&gt;-->
-                                    <!--&lt;!&ndash;?<descriptorRef>artifact</descriptorRef>&ndash;&gt;-->
-                                <!--&lt;!&ndash;?</assembly>&ndash;&gt;-->
-                                <!--&lt;!&ndash;?<entryPoint>["java"]</entryPoint>&ndash;&gt;-->
-                                <!--&lt;!&ndash;?<cmd>["-jar","maven/${project.name}-${project.version}.jar"]</cmd>&ndash;&gt;-->
-                            <!--&lt;!&ndash;?</build>&ndash;&gt;-->
-                            <!--&lt;!&ndash;?<run>&ndash;&gt;-->
-                                <!--&lt;!&ndash;?<ports>&ndash;&gt;-->
-                                    <!--&lt;!&ndash;?<port>8888:8080</port>&ndash;&gt;-->
-                                <!--&lt;!&ndash;?</ports>&ndash;&gt;-->
-                            <!--&lt;!&ndash;?</run>&ndash;&gt;-->
-                        <!--&lt;!&ndash;?</image>&ndash;&gt;-->
-                    <!--&lt;!&ndash;?</images>&ndash;&gt;-->
-                <!--&lt;!&ndash;?</configuration>&ndash;&gt;-->
-                <!--&lt;!&ndash;?<configuration>&ndash;&gt;-->
-                    <!--&lt;!&ndash;?<imageName>lhdocker.com/${project.artifactId}</imageName>&ndash;&gt;-->
-                    <!--&lt;!&ndash;?<baseImage>java</baseImage>&ndash;&gt;-->
-                    <!--&lt;!&ndash;?<dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>&ndash;&gt;-->
-                    <!--&lt;!&ndash;?<dockerHost>tcp://192.168.99.100:2376</dockerHost>&ndash;&gt;-->
-                    <!--&lt;!&ndash;?<dockerCertPath>/Users/lihong/.docker/machine/machines/default</dockerCertPath>&ndash;&gt;-->
-                    <!--&lt;!&ndash;?<resources>&ndash;&gt;-->
-                        <!--&lt;!&ndash;?<resource>&ndash;&gt;-->
-                            <!--&lt;!&ndash;?<targetPath>/</targetPath>&ndash;&gt;-->
-                            <!--&lt;!&ndash;?<directory>${project.build.directory}</directory>&ndash;&gt;-->
-                            <!--&lt;!&ndash;?<include>${project.build.finalName}.jar</include>&ndash;&gt;-->
-                        <!--&lt;!&ndash;?</resource>&ndash;&gt;-->
-                    <!--&lt;!&ndash;?</resources>&ndash;&gt;-->
-                <!--&lt;!&ndash;?</configuration>&ndash;&gt;-->
+			<!-- https://mvnrepository.com/artifact/com.spotify/docker-maven-plugin -->
+			<!--<plugin>-->
+			<!--<groupId>com.spotify</groupId>-->
+			<!--<artifactId>docker-maven-plugin</artifactId>-->
+			<!--<version>0.4.13</version>-->
+			<!--&lt;!&ndash;?<configuration>&ndash;&gt;-->
+			<!--&lt;!&ndash;?<dockerHost>tcp://192.168.99.100:2376</dockerHost>&ndash;&gt;-->
+			<!--&lt;!&ndash;?<certPath>C:\Users\fairjm\.docker\machine\machines\default</certPath>&ndash;&gt;-->
+			<!--&lt;!&ndash;?<images>&ndash;&gt;-->
+			<!--&lt;!&ndash;?<image>&ndash;&gt;-->
+			<!--&lt;!&ndash;?<name>${project.name}:${project.version}</name>&ndash;&gt;-->
+			<!--&lt;!&ndash;?<build>&ndash;&gt;-->
+			<!--&lt;!&ndash;?<from>openjdk:8-jre</from>&ndash;&gt;-->
+			<!--&lt;!&ndash;?<args>&ndash;&gt;-->
+			<!--&lt;!&ndash;?<JAR_FILE>${project.name}-${project.version}.jar</JAR_FILE>&ndash;&gt;-->
+			<!--&lt;!&ndash;?</args>&ndash;&gt;-->
+			<!--&lt;!&ndash;?<assembly>&ndash;&gt;-->
+			<!--&lt;!&ndash;?<descriptorRef>artifact</descriptorRef>&ndash;&gt;-->
+			<!--&lt;!&ndash;?</assembly>&ndash;&gt;-->
+			<!--&lt;!&ndash;?<entryPoint>["java"]</entryPoint>&ndash;&gt;-->
+			<!--&lt;!&ndash;?<cmd>["-jar","maven/${project.name}-${project.version}.jar"]</cmd>&ndash;&gt;-->
+			<!--&lt;!&ndash;?</build>&ndash;&gt;-->
+			<!--&lt;!&ndash;?<run>&ndash;&gt;-->
+			<!--&lt;!&ndash;?<ports>&ndash;&gt;-->
+			<!--&lt;!&ndash;?<port>8888:8080</port>&ndash;&gt;-->
+			<!--&lt;!&ndash;?</ports>&ndash;&gt;-->
+			<!--&lt;!&ndash;?</run>&ndash;&gt;-->
+			<!--&lt;!&ndash;?</image>&ndash;&gt;-->
+			<!--&lt;!&ndash;?</images>&ndash;&gt;-->
+			<!--&lt;!&ndash;?</configuration>&ndash;&gt;-->
+			<!--&lt;!&ndash;?<configuration>&ndash;&gt;-->
+			<!--&lt;!&ndash;?<imageName>lhdocker.com/${project.artifactId}</imageName>&ndash;&gt;-->
+			<!--&lt;!&ndash;?<baseImage>java</baseImage>&ndash;&gt;-->
+			<!--&lt;!&ndash;?<dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>&ndash;&gt;-->
+			<!--&lt;!&ndash;?<dockerHost>tcp://192.168.99.100:2376</dockerHost>&ndash;&gt;-->
+			<!--&lt;!&ndash;?<dockerCertPath>/Users/lihong/.docker/machine/machines/default</dockerCertPath>&ndash;&gt;-->
+			<!--&lt;!&ndash;?<resources>&ndash;&gt;-->
+			<!--&lt;!&ndash;?<resource>&ndash;&gt;-->
+			<!--&lt;!&ndash;?<targetPath>/</targetPath>&ndash;&gt;-->
+			<!--&lt;!&ndash;?<directory>${project.build.directory}</directory>&ndash;&gt;-->
+			<!--&lt;!&ndash;?<include>${project.build.finalName}.jar</include>&ndash;&gt;-->
+			<!--&lt;!&ndash;?</resource>&ndash;&gt;-->
+			<!--&lt;!&ndash;?</resources>&ndash;&gt;-->
+			<!--&lt;!&ndash;?</configuration>&ndash;&gt;-->
 
-                <!--<configuration>-->
-                    <!--<imageName>${docker.image.prefix}/${project.name}:${project.version}</imageName>-->
-                    <!--<dockerDirectory>src/main/docker</dockerDirectory>-->
-                    <!--<dockerHost>http://127.0.0.1:5200</dockerHost>-->
-                    <!--<resources>-->
-                        <!--<resource>-->
-                            <!--<targetPath>/</targetPath>-->
-                            <!--<directory>${project.build.directory}</directory>-->
-                            <!--<include>${project.build.finalName}.war</include>-->
-                        <!--</resource>-->
-                    <!--</resources>-->
-                <!--</configuration>-->
+			<!--<configuration>-->
+			<!--<imageName>${docker.image.prefix}/${project.name}:${project.version}</imageName>-->
+			<!--<dockerDirectory>src/main/docker</dockerDirectory>-->
+			<!--<dockerHost>http://127.0.0.1:5200</dockerHost>-->
+			<!--<resources>-->
+			<!--<resource>-->
+			<!--<targetPath>/</targetPath>-->
+			<!--<directory>${project.build.directory}</directory>-->
+			<!--<include>${project.build.finalName}.war</include>-->
+			<!--</resource>-->
+			<!--</resources>-->
+			<!--</configuration>-->
 
-            <!--</plugin>-->
+			<!--</plugin>-->
 
 		</plugins>
 	</build>
@@ -439,7 +454,7 @@
 		<pluginRepository>
 			<id>mvnrepository</id>
 			<name>mvnrepository</name>
-			<url>https://mvnrepository.com/artifact/com.alibaba/fastjson/</url>
+			<url>https://mvnrepository.com/artifact/</url>
 			<releases>
 				<enabled>true</enabled>
 			</releases>
