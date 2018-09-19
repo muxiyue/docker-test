@@ -14,6 +14,8 @@ configs:
     file: ./logstash/logstash.conf
   kibana_config:
     file: ./kibana/kibana.yml
+  apm_server_config:
+    file: ./apm_server/apm-server.yml
   es_proxy_config:
     file: ./es_proxy/nginx.conf
 #  filebeat_config:
@@ -25,7 +27,7 @@ services:
     environment:
       - "cluster.name=es-cluster"
       - "bootstrap.memory_lock=true"
-      - "ES_JAVA_OPTS=-Xms2g -Xmx2g"
+      - "ES_JAVA_OPTS=-Xms1g -Xmx1g"
       - "network.host=0.0.0.0"
       - "discovery.zen.minimum_master_nodes=2"
       - "discovery.zen.ping.unicast.hosts=elasticsearch"
@@ -66,7 +68,7 @@ services:
       resources:
         limits:
           cpus: '2'
-          memory: 4096M
+          memory: 2048M
       placement:
         constraints:
           - node.labels.logstash == logstash
@@ -135,6 +137,27 @@ services:
     configs:
       - source: es_proxy_config
         target: /etc/nginx/nginx.conf
+
+  apm-server:
+    image: hub.c.163.com/muxiyue/apm-server:6.4.0
+    hostname: apm-server
+    ports:
+      - "8200:8200"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+    deploy:
+      placement:
+        constraints:
+          - node.labels.apmserver == apmserver
+      restart_policy:
+        condition: on-failure
+    depends_on:
+      - elasticsearch
+    networks:
+      - esnet
+    configs:
+      - source: apm_server_config
+        target: /usr/share/apm-server/apm-server.yml
 
 #swarm不支持
 #  logpilot:
