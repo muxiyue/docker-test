@@ -22,7 +22,7 @@ configs:
 #    file: ./filebeat/filebeat.yml
 services:
   elasticsearch:
-    image: hub.c.163.com/muxiyue/elasticsearch:6.4.0
+    image: hub.c.163.com/muxiyue/elasticsearch:6.4.0-crack
     #hostname: elasticsearch
     environment:
       - "cluster.name=es-cluster"
@@ -32,6 +32,18 @@ services:
       - "discovery.zen.minimum_master_nodes=2"
       - "discovery.zen.ping.unicast.hosts=elasticsearch"
       - "ELASTIC_PASSWORD=elastic"
+      - "xpack.security.audit.enabled=true"
+#      https://www.elastic.co/guide/en/elasticsearch/reference/6.4/configuring-tls.html#node-certificates
+#      https://www.elastic.co/guide/en/elasticsearch/reference/6.4/configuring-tls-docker.html
+#  license.json 上传之前，改为false，上传之后再改回成true，具体见x-pack下面的破解说明。
+      - "xpack.security.enabled=true"
+#      - xpack.security.http.ssl.enabled=true
+      - "xpack.security.transport.ssl.enabled=true"
+      - "xpack.security.transport.ssl.verification_mode=certificate"
+      - "xpack.ssl.certificate_authorities=certs/ca/ca.crt"
+      - "xpack.ssl.certificate=certs/elastic/elastic.crt"
+      - "xpack.ssl.key=certs/elastic/elastic.key"
+
     ulimits:
       memlock:
         soft: -1
