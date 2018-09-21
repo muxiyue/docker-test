@@ -55,3 +55,14 @@ curl -u elastic:elastic -XGET http://172.16.1.191:9200/_xpack/security/user
 
 curl -u elastic:elastic 172.16.1.191:9200/_cat/nodes?v
 
+
+
+### CA证书生成
+
+> 进入容器的默认目录 /usr/share/elasticsearch
+```
+# Enter IP Addresses 127.0.0.1
+# Enter DNS names  elasticsearch
+./bin/x-pack/certgen
+unzip certificate-bundle.zip -d config
+```
