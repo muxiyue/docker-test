@@ -19,9 +19,10 @@ jar uvf x-pack-core-6.4.0.jar org/elasticsearch/xpack/core/XPackBuild.class
 ```
 
 ### 获取证书
-> 当前目录下的license.json即为生成好的
 
-获取 license 证书
+
+#### 获取 license 证书
+> 当前目录下的license.json即为生成好的
 
 ①https://license.elastic.co/registration 填些用户名，邮箱（重要，获取下载链接），Country选择China，其他信息随意填写
 
@@ -33,6 +34,8 @@ jar uvf x-pack-core-6.4.0.jar org/elasticsearch/xpack/core/XPackBuild.class
 
 将 "expiry_date_in_millis":1561420799999替换为 "expiry_date_in_millis":3107746200000    # 1年变为50年
 
+
+#### 替换 license 证书
 ④使用curl替换 license(license.json指的是刚刚下载修改属性后的证书，要开启elasticsearch服务)
 
 curl -u elastic:elastic -H 'Content-Type: application/json' -XPUT '172.16.1.191:9200/_xpack/license?acknowledge=true' -d @license.json
