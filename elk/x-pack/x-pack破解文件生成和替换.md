@@ -1,5 +1,5 @@
 ### 生成x-pack-core-6.4.0.jar 
-> 当前目录下的即为生成好的，hub.c.163.com/muxiyue/elasticsearch:6.4.0-crack中已经替换。
+> 当前目录下的x-pack-core-6.4.0.jar即为生成好的，hub.c.163.com/muxiyue/elasticsearch:6.4.0-crack中已经替换。
 替换路径为/usr/share/elasticsearch/modules/x-pack-core
 #### 1.编译
 
@@ -19,6 +19,7 @@ jar uvf x-pack-core-6.4.0.jar org/elasticsearch/xpack/core/XPackBuild.class
 ```
 
 ### 获取证书
+> 当前目录下的license.json即为生成好的
 
 获取 license 证书
 
