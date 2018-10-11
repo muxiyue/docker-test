@@ -266,10 +266,49 @@
 			<version>1.4.4</version>
 		</dependency>
 
+
+
+		<dependency>
+			<groupId>net.fortytwo.ripple</groupId>
+			<artifactId>ripple-scriptengine</artifactId>
+			<version>1.2</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.codehaus.groovy/groovy-all -->
+		<dependency>
+			<groupId>org.codehaus.groovy</groupId>
+			<artifactId>groovy-all</artifactId>
+			<!--<version>2.6.0-alpha-1</version>-->
+			<!--<version>3.0.0-alpha-3</version>-->
+			<!--<type>pom</type>-->
+			<version>2.4.12</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
 		<plugins>
+
+			<plugin>
+				<groupId>com.mxy.maven</groupId>
+				<artifactId>sample-maven-plugin</artifactId>
+				<version>1.0-SNAPSHOT</version>
+				<configuration>
+					<inlineArgs>
+						from config
+					</inlineArgs>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>sayhi</goal>
+							<goal>hello</goal>
+						</goals>
+						<phase>package</phase>
+					</execution>
+				</executions>
+			</plugin>
+
 			<!--mvn jprotobuf:precompile-->
 			<!--or-->
 			<!--mvn package-->
