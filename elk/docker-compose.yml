@@ -99,7 +99,7 @@ services:
       - elasticsearch
 
   kibana:
-    image: hub.c.163.com/muxiyue/kibana:6.4.0
+    image: hub.c.163.com/muxiyue/kibana:6.4.0-chinese
     hostname: kibana
     environment:
       - "ELASTICSEARCH_URL=http://elasticsearch:9200"
@@ -197,6 +197,41 @@ services:
 #          condition: on-failure
 
 # 暂时不用，使用log-pilot
+
+
+#  mount 172.16.1.191:/logs /logs
+
+#  时区修改
+#  mv /etc/localtime /etc/localtime.bak
+#  ln -s /usr/share/zoneinfo/Asia/Shanghai  /etc/localtime
+#  date
+#
+#
+#  docker ps -a |grep log-pilot| awk '{print $1}'|xargs docker rm -f
+#
+#  docker login 172.16.1.146 -p 1qaz\!QAZ -u admin
+#  docker run -itd \
+#  --name log-pilot \
+#  -v /var/run/docker.sock:/var/run/docker.sock \
+#  -v /:/host:ro \
+#  -v /etc/localtime:/etc/localtime:ro \
+#  -e PILOT_TYPE=filebeat \
+#  -e LOGGING_OUTPUT=logstash  \
+#  -e LOGSTASH_HOST=localhost \
+#  -e LOGSTASH_PORT=5044 \
+#  --privileged \
+#  --restart=always  \
+#  --net=host \
+#  registry.cn-hangzhou.aliyuncs.com/acs-sample/log-pilot:latest
+#
+#
+#  172.16.1.146/wondertek/log-pilot:latest-multiline
+
+#  hub.c.163.com/muxiyue/log-pilot:latest-multiline
+
+#  registry.cn-hangzhou.aliyuncs.com/acs-sample/log-pilot:latest
+
+
 #  filebeat:
 #      image: hub.c.163.com/muxiyue/filebeat:6.4.0
 #      hostname: filebeat
