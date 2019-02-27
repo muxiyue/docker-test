@@ -9,6 +9,8 @@ import java.util.List;
 public class User implements Serializable {
     private static final long serialVersionUID = -7890663945232864573L;
 
+    public static String USER_NAME = "user_name";
+
     @Protobuf(fieldType = FieldType.INT32, required = false, order = 1)
     private Integer userId;
 

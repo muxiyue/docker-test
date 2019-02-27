@@ -7,10 +7,25 @@ server:
 
 # mysql
 spring:
+    http:
+        encoding:
+            charset: UTF-8
+            enabled: true
+            force: true
+        multipart:
+            max-file-size: 20MB   #maxFileSize 是单个文件大小
+            max-request-size: 20MB  #maxRequestSize是设置总上传的数据大小
+            # 当 resolveLazily 为 flase 时，会立即调用 parseRequest() 方法对请求数据进行解析，
+            # 然后将解析结果封装到 DefaultMultipartHttpServletRequest 中；
+            # 而当 resolveLazily 为 true 时，会在 DefaultMultipartHttpServletRequest 的 initializeMultipart() 方法
+            # 调用 parseRequest() 方法对请求数据进行解析，而 initializeMultipart() 方法又是被 getMultipartFiles() 方法调用，
+            # 即当需要获取文件信息时才会去解析请求数据
+            resolve-lazily: true
+            enabled: true
     datasource:
         type: com.alibaba.druid.pool.DruidDataSource
         driverClassName: com.mysql.jdbc.Driver
-        url: jdbc:mysql://127.0.0.1:3306/docker-test?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2B8&allowMultiQueries=true
+        url: jdbc:mysql://127.0.0.1:3306/oms_sso?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2B8&allowMultiQueries=true
         username: root
         password: 123456
 #        driverClassName: org.h2.Driver
@@ -30,3 +45,13 @@ spring:
 mybatis:
     mapperLocations: classpath:mapper/**/*.xml
 
+
+velocity:
+    resource:
+        loader:
+            cache: false   #velocity 是否开启缓存
+
+    library:
+        autoreload: true   # 是否热加载
+
+velocimacro.library.autoreload: false # 宏缓存

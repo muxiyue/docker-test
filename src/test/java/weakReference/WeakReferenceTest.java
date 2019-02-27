@@ -10,7 +10,8 @@ import java.util.concurrent.TimeUnit;
 public class WeakReferenceTest {
 
     public static void main(String[] args) throws InterruptedException {
-        String str = new String("JAVA对象");
+//        String str = new String("JAVA对象");
+        String str = "JAVA对象";
 
         //创建一个如引用对象 指向 str对象
 

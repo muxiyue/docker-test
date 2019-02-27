@@ -16,6 +16,9 @@
     <bean id="beanFactoryPostProcessor" class="bean.MyBeanFactoryPostProcessor">
     </bean>
 
+    <bean id="testSmartLifecycle" class="bean.TestSmartLifecycle">
+    </bean>
+
     <bean id="person" class="bean.Person" init-method="myInit"
           destroy-method="myDestory" scope="singleton" p:name="张三" p:address="广州"
           p:phone="15900000000" />

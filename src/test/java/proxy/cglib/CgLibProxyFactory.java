@@ -46,6 +46,7 @@ public class CgLibProxyFactory implements MethodInterceptor {
         //执行目标对象的方法
         Object returnValue = proxy.invoke(target, args);
 
+
 //        Object returnValue = method.invoke(target, args);
 
         System.out.println("提交事务...");

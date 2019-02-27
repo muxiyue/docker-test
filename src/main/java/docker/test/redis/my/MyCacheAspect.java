@@ -2,15 +2,18 @@ package docker.test.redis.my;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.annotation.*;
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.AfterThrowing;
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
-import org.springframework.stereotype.Component;
 
 //定义切面
-//@EnableAspectJAutoProxy
-@Component
-@Aspect()
+/////////@EnableAspectJAutoProxy
+//@Component
+//@Aspect()
 public class MyCacheAspect {
 
     /**切面点*/

@@ -34,6 +34,7 @@ public class ExcuteJs {
 
     public static void main(String[] args) throws FileNotFoundException, ScriptException, NoSuchMethodException {
         excuteJs("csp");
+        System.out.println(Thread.currentThread().getContextClassLoader().getResource(""));
         System.out.println(ExcuteJs.class.getResource("/").getPath() + "static/testDepend.js");
     }
 }

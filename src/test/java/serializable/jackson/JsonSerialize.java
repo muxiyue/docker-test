@@ -44,6 +44,9 @@ public class JsonSerialize {
         byte[] writeValueAsBytes = null;
 //        for (int i = 0; i < 10; i++) {
             writeValueAsBytes = mapper.writeValueAsBytes(u);
+
+        System.out.println(mapper.writeValueAsString(u));
+
 //        }
         System.out.println("json serialize: " + (System.currentTimeMillis() - t1) + "ms; 总大小：" + writeValueAsBytes.length);
         Long t2 = System.currentTimeMillis();
