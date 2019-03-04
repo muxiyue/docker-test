@@ -1,5 +1,8 @@
 version: '3.6'
 
+
+#docker stack deploy -c /root/elk/docker-compose.yml elk
+
 volumes:
   esdata:
     driver: local
