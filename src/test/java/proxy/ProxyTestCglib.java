@@ -9,7 +9,7 @@ public class ProxyTestCglib {
     public static void main(String[] args) {
 
         // 保存字节码文件
-        System.setProperty(DebuggingClassWriter.DEBUG_LOCATION_PROPERTY, "/Users/chenshengpeng/F_Work/demo/renren-generator/src/test/java/proxy/file/");
+        System.setProperty(DebuggingClassWriter.DEBUG_LOCATION_PROPERTY, "proxy/file");
         //创建目标对象  
         LoginService loninService = new LoginServiceImpl();  
         UserService userService = new UserServiceImpl();  
@@ -41,6 +41,7 @@ public class ProxyTestCglib {
 
         //执行代理对象的方法
         userDao.save();
+
 
     }  
 }  

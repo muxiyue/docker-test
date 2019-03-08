@@ -6,8 +6,7 @@ import org.apache.commons.logging.LogFactory;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
-  
-  
+
 interface LoginService{  
     public boolean checkUser();  
 }  
@@ -60,6 +59,7 @@ class ProxyHandler implements InvocationHandler{
 public class ProxyTestJDK {  
     public static void main(String[] args) throws NoSuchMethodException {
 
+        /* 设置此系统属性,让JVM生成的Proxy类写入文件.*/
         System.setProperty("sun.misc.ProxyGenerator.saveGeneratedFiles", "true");
 
         //创建目标对象  
@@ -69,28 +69,26 @@ public class ProxyTestJDK {
         ProxyHandler proxyHandler = new ProxyHandler();
 
 
-
-
         //创建LoginService代理对象
         proxyHandler.setTarget(loninService);
         LoginService loninService$Proxy = (LoginService) Proxy.newProxyInstance(loninService.getClass().getClassLoader(),
             loninService.getClass().getInterfaces(), proxyHandler);
 
-        System.out.println("=== ========" + loninService$Proxy.toString());
+        System.out.println(loninService$Proxy.getClass() + "=== ========" + loninService$Proxy.toString());
 
 
-        loninService$Proxy = (LoginService) Proxy.newProxyInstance(loninService.getClass().getClassLoader(),
-            loninService.getClass().getInterfaces(), new MapperProxyOwn<LoginService>(null, null, null));
-        System.out.println("=== " + loninService$Proxy.toString());
-
-
-        loninService$Proxy.checkUser();
-
-        //创建UserService代理对象
-        proxyHandler.setTarget(userService);
-        UserService userService$Proxy = (UserService) Proxy.newProxyInstance(userService.getClass().getClassLoader(),
-            userService.getClass().getInterfaces(), proxyHandler);
-        userService$Proxy.getUserName();
+//        loninService$Proxy = (LoginService) Proxy.newProxyInstance(loninService.getClass().getClassLoader(),
+//            loninService.getClass().getInterfaces(), new MapperProxyOwn<LoginService>(null, null, new HashMap<Method, MapperMethod>()));
+//        System.out.println("=== " + loninService$Proxy.toString());
+//
+//
+//        loninService$Proxy.checkUser();
+//
+//        //创建UserService代理对象
+//        proxyHandler.setTarget(userService);
+//        UserService userService$Proxy = (UserService) Proxy.newProxyInstance(userService.getClass().getClassLoader(),
+//            userService.getClass().getInterfaces(), proxyHandler);
+//        userService$Proxy.getUserName();
           
 
 
