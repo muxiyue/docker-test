@@ -99,7 +99,7 @@ ENV JAVA_OPTS="$JAVA_OPTS -Dspring.profiles.active=test"
 #--container-label aliyun.logs.gc.tags="from=tomcat,index=tomcat_gc_log" \
 #--container-label aliyun.logs.access=/usr/local/tomcat/logs/localhost_access_log.*.txt \
 #--container-label aliyun.logs.access.tags="from=tomcat,index=tomcat_access_log" \
-#172.16.1.146/wondertek/docker-test:1.0.0-2018091909
+#172.16.1.146/perferct/docker-test:1.0.0-2018091909
 
 # 日志采集相关 需要挂载对应的目录
 VOLUME ["/usr/local/tomcat/logs/"]

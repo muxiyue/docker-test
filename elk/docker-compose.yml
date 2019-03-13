@@ -228,7 +228,7 @@ services:
 #  registry.cn-hangzhou.aliyuncs.com/acs-sample/log-pilot:latest
 #
 #
-#  172.16.1.146/wondertek/log-pilot:latest-multiline
+#  172.16.1.146/perferct/log-pilot:latest-multiline
 
 #  hub.c.163.com/muxiyue/log-pilot:latest-multiline
 
