@@ -321,5 +321,10 @@
     <orderEntry type="library" name="Maven: org.scijava:native-lib-loader:2.3.2" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.25" level="project" />
     <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.16.10" level="project" />
+    <orderEntry type="library" name="Maven: ws.schild:jave-core:2.4.6" level="project" />
+    <orderEntry type="library" name="Maven: commons-logging:commons-logging-api:1.1" level="project" />
+    <orderEntry type="library" name="Maven: ws.schild:jave-native-linux64:2.4.6" level="project" />
+    <orderEntry type="library" name="Maven: ws.schild:jave-native-win64:2.4.6" level="project" />
+    <orderEntry type="library" name="Maven: ws.schild:jave-native-osx64:2.4.6" level="project" />
   </component>
 </module>
