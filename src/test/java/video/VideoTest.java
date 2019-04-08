@@ -129,6 +129,7 @@ public class VideoTest {
             AudioAttributes audio = new AudioAttributes();
             audio.setSamplingRate(new Integer(8000));
             audio.setVolume(512);
+            audio.setChannels(1);
 
             VideoAttributes video = new VideoAttributes();
 
@@ -139,7 +140,7 @@ public class VideoTest {
 
             EncodingAttributes attrs = new EncodingAttributes();
             attrs.setFormat("3gp");
-//            attrs.setAudioAttributes(audio);
+            attrs.setAudioAttributes(audio);
             attrs.setVideoAttributes(video);
 
 
