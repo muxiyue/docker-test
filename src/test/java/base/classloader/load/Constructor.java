@@ -1,4 +1,4 @@
-package base.classloader;
+package base.classloader.load;
 
 // new子类的对象时，先调用父类staic{}里的东西，在调用子类里的static{}，在调用父类{}的在调用父类构造方法，在调用子类构造方法
 // 调用子类或者父类的静态方法时，先调用父类的static{}在调用子类的static{}

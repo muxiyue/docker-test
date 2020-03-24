@@ -1,4 +1,4 @@
-package classloader.javassist;
+package base.classloader.bytes.javassist;
 
 import javassist.ClassPool;
 import javassist.CtClass;

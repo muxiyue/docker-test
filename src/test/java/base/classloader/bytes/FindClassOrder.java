@@ -1,4 +1,4 @@
-package classloader;
+package base.classloader.bytes;
 
 import com.test.test.HelloLoader;
 

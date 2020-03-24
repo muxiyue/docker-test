@@ -315,6 +315,8 @@ public class UploadController {
                             inChannel.transferTo(0, inChannel.size(), outChnnel);
                             inChannel.close();
 
+//                            outChnnel.position(inChannel.size());
+
 //                            IOUtils.copy(new FileInputStream(file), outputStream);
                             log.info("合并分片文件" + file.getAbsolutePath());
                         }

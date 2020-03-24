@@ -1,4 +1,4 @@
-package classloader;
+package base.classloader.bytes;
 
 import com.test.test.HelloLoader;
 
@@ -17,7 +17,7 @@ public class FindClassOrder2 {
 //        String cname = cl.getResources(name.replace('.', '/') + ".class").nextElement().getPath();
         FileInputStream in=null;
         try {
-            in=new FileInputStream("/Users/chenshengpeng/F_Work/demo/springBoot/springboot-springSecurity4/target/test-classes/com/test/test/HelloLoader.class");
+            in=new FileInputStream("~/F_Work/demo/springBoot/springboot-springSecurity4/target/test-classes/com/test/test/HelloLoader.class");
             ByteArrayOutputStream buffer=new ByteArrayOutputStream();
             int ch;
             while((ch=in.read())!=-1){

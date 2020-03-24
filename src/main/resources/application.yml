@@ -37,9 +37,10 @@ spring:
         date-format: yyyy-MM-dd HH:mm:ss
     resources:
             static-locations: classpath:/static/,classpath:/views/
-    redis:
-      cluster:
-        nodes: 127.0.0.1:7001,127.0.0.1:7002,127.0.0.1:7003,127.0.0.1:7004,127.0.0.1:7005,127.0.0.1:7006
+#    redis:
+#      cluster:
+#        nodes: 127.0.0.1:7001,127.0.0.1:7002,127.0.0.1:7003,127.0.0.1:7004,127.0.0.1:7005,127.0.0.1:7006
+
 
 # Mybatis配置
 mybatis:
@@ -55,3 +56,5 @@ velocity:
         autoreload: true   # 是否热加载
 
 velocimacro.library.autoreload: false # 宏缓存
+
+

@@ -1,4 +1,4 @@
-package classloader.asm;
+package base.classloader.bytes.asm;
 
 import jdk.internal.org.objectweb.asm.*;
 
@@ -32,7 +32,7 @@ class AddSecurityCheckMethodAdapter extends MethodVisitor {
         super(Opcodes.ASM5,mv);
     }
     public void visitCode() {
-        visitMethodInsn(Opcodes.INVOKESTATIC, "classloader/asm/SecurityChecker",
+        visitMethodInsn(Opcodes.INVOKESTATIC, "base/classloader/classloader/asm/SecurityChecker",
             "checkSecurity", "()Z");
         super.visitCode();
     }

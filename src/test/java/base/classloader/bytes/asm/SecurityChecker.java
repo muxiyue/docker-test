@@ -1,4 +1,4 @@
-package classloader.asm;
+package base.classloader.bytes.asm;
 
 public class SecurityChecker {
  public static boolean checkSecurity() { 
